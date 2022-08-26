@@ -11,7 +11,7 @@ const allTaskListNav = [
         nombre:"Comprar 500 de cilantro",
         estado:false
     },
-    
+
     {
         nombre:"Lavar la ropa",
         estado:false
@@ -28,12 +28,28 @@ const allTaskListNav = [
     },
 ]
 
+
+
 let c = '';
 
 allTaskListNav.forEach(element => {
-    c+=`<li>${element}</li>`;
+    c+=`<li class = "elementos pendientes">${element.nombre}</li>`;
     });
     
 allTaskList.innerHTML=`<ul>
 ${c}
 </ul>`;
+
+const elementosLista = document.getElementsByClassName('elementos');
+
+for (let i = 0; i < elementosLista.length; i++) {
+    elementosLista[i].addEventListener("click", ()=>{
+        if (elementosLista[i].className === "elementos pendientes"){
+            elementosLista[i].className = "elementos hecho"
+            
+        } else {
+            elementosLista[i].className = "elementos pendientes"
+        }
+    })
+    
+}
