@@ -60,3 +60,10 @@ main{
 .hecho{
     text-decoration:line-through;
 }
+
+.all_task_list_1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    color: #a3a3a3; 
+    line-height: 25px;
+}
