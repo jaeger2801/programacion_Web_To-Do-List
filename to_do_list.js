@@ -1,12 +1,39 @@
-const allTaskList = document.getElementsByClassName("all_task");
+const allTaskList = document.getElementById("all_task_list_1")
 
 /// Create the arrays
 const allTaskListNav = [
-    {text:"Sacar la basura a las 9 am"},
-    {text:"Comprar 500 de cilantro"},
-    {text:"Lavar la ropa"},
-    {text:"Limpiar arenero de los gatos"},
-    {text:"Visitar a los panas"},
+    {
+        nombre:"Sacar la basura a las 9 am",
+        estado:false
+    },
+
+    {
+        nombre:"Comprar 500 de cilantro",
+        estado:false
+    },
+    
+    {
+        nombre:"Lavar la ropa",
+        estado:false
+    },
+
+    {
+        nombre:"Limpiar arenero de los gatos",
+        estado:false
+    },
+
+    {
+        nombre:"Visitar a los panas",
+        estado:false
+    },
 ]
 
-console.log(allTaskListNav);
+let c = '';
+
+allTaskListNav.forEach(element => {
+    c+=`<li>${element}</li>`;
+    });
+    
+allTaskList.innerHTML=`<ul>
+${c}
+</ul>`;
