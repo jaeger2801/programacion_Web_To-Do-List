@@ -46,7 +46,7 @@ for (let i = 0; i < elementosLista.length; i++) {
     elementosLista[i].addEventListener("click", ()=>{
         if (elementosLista[i].className === "elementos pendientes"){
             elementosLista[i].className = "elementos hecho"
-            
+
         } else {
             elementosLista[i].className = "elementos pendientes"
         }
