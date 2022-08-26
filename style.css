@@ -1,1 +1,58 @@
-@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@300&family=Enriqueta:wght@700&family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+
+body{
+    background-color: rgb(51, 51, 51);
+}
+
+h1{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 35px;
+    color: rgb(241, 241, 241);
+}
+
+h2{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 25px;
+    color: rgb(241, 241, 241);
+}
+
+h3{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 18px;
+    color: #f0f0f0; 
+}
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.list_tittle{
+    background-color: rgb(45,115,112);
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.all_task_list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+    width: 50%;
+}
+
+.to_do_list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+.complete_task{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 20px;
+}
