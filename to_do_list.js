@@ -1,5 +1,6 @@
 const allTaskList = document.getElementById("all_task_list_1")
-const toDoTaskList2 = document.getElementById("to_do_task_list_2")
+const toDoTaskList = document.getElementById("pendientes")
+const taskComplete = document.getElementById("completados")
 
 let pendientes = [];
 let completados = [];
@@ -44,9 +45,6 @@ allTaskList.innerHTML = `<ul>
 ${c}
 </ul>`;
 
-toDoTaskList2.innerHTML = `<ul>
-${c}
-</ul>`;
 
 const elementosLista = document.getElementsByClassName('elementos');
 
@@ -74,12 +72,34 @@ for (let i = 0; i < elementosLista.length; i++) {
             }
         }) 
         
+        creaListas();
+
         console.log(pendientes);
         console.log(completados);
     })
 
 }
 
+function creaListas(){
 
+    let listaCompletas = '';
+    let listaPendientes = '';
 
+    completados.forEach(element => {
+        listaCompletas += `<li class = "elementos hecho">${element.nombre}</li>`;
+    });
+
+    pendientes.forEach(element => {
+        listaPendientes += `<li class = "elementos pendientes">${element.nombre}</li>`;
+    });
+
+    taskComplete.innerHTML = `<ul>
+    ${listaCompletas}
+    </ul>`;
+
+    toDoTaskList.innerHTML = `<ul>
+    ${listaPendientes}
+    </ul>`;
+
+}
 
