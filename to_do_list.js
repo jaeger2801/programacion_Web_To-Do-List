@@ -1,4 +1,5 @@
 const allTaskList = document.getElementById("all_task_list_1")
+const toDoTaskList2 = document.getElementById("to_do_task_list_2")
 
 let pendientes = [];
 let completados = [];
@@ -40,6 +41,10 @@ allTaskListNav.forEach(element => {
 });
 
 allTaskList.innerHTML = `<ul>
+${c}
+</ul>`;
+
+toDoTaskList2.innerHTML = `<ul>
 ${c}
 </ul>`;
 
